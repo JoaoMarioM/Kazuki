@@ -1,4 +1,4 @@
 # Kazuki
 Técnologias utilizadas:
-ReactJS
+ReactJS,
 NodeJS
