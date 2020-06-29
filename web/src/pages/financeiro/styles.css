@@ -1,0 +1,18 @@
+.btnFin{
+    display: flex;
+    justify-content: space-between;
+}
+.btnFin button{
+    width: 32%;
+    height: 150px;
+    border-radius: 10px;
+}
+.sale{
+    background-color: #0192FF;
+}
+.receive{
+    background-color: #27DA00;
+}
+.pay{
+    background-color: #FF0101;
+}
