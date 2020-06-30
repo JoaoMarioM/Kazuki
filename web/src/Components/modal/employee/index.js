@@ -11,7 +11,6 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 
 import api from '../../../services/api'
 
-
 export default function ModalEmployee({ onclose = () => {} }) {
 
   const [name, setName] = useState('')
