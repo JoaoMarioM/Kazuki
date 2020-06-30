@@ -54,28 +54,34 @@
     width: 800px;
 }
 .modalF  .address{
-    width: 600px;
+    width: 580px;
+    margin-right: 10px;
 }
-.modalF  .cep{
+/* .modalF  .cep{
     width: 180px;
-}
+} */
 .modalF  .neighborhood{
-    width: 330px;
+    width: 370px;
+    margin-right: 10px;
 }
 .modalF  .city{
-    width: 330px;
+    width: 300px;
+    margin-right: 10px;
 }
 .modalF  .state{
     width: 100px;
 }
 .modalF  .phone{
-    width: 200px;
+    width: 205px;
+    margin-right: 10px;
 }.modalF     .cellPhone{
-    width: 200px;
+    width: 205px;
+    margin-right: 10px;
 }
 .modalF  .email{
     width: 360px;
 }
 .modalF  .cpf{
     width: 200px;
+    margin-right: 10px;
 }

@@ -64,9 +64,20 @@
 .clientCont .hour{
     width: 25%;
 }
+.clientCont .payment{
+    width: 180px;
+}
+.clientCont .conj1{
+    display: flex;
+    justify-content: space-between;
+}
 .clientCont .conj2{
     display: flex;
     justify-content: space-between;
+}
+.clientCont .conj3{
+    display: flex;
+    justify-content: center;
 }
 .clientCont .conj2 select{
     border-radius: 10px;
@@ -76,7 +87,12 @@
     border-color: #3333;
 }
 .clientCont .btnCad{
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 20px; */
+    margin:20px auto 20px auto;
+    width: 150px;
+    height: 35px;
 }
 .clientCont .add{
     width: auto;
@@ -100,10 +116,4 @@
     height: auto;
     background-color: transparent;
     display: block;
-}
-.check{
-    align-items: flex-start;
-}
-.addressCheck .address{
-    width: 850px;
 }

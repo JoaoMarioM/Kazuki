@@ -53,11 +53,16 @@
 .modalF  .name{
     width: 800px;
 }
-.modalF  .address{
-    width: 600px;
+/* .modalF  .address{
+    width: 750px;
+    margin-right: 10px;
+} */
+.modalF .number{
+    width: 50px;
+    margin-right: 10px;
 }
-.modalF  .cep{
-    width: 180px;
+.modalF .cep{
+    width: 145px;
 }
 .modalF  .neighborhood{
     width: 330px;

@@ -64,6 +64,7 @@
 .clientCont .hour{
     width: 25%;
 }
+
 .clientCont .conj2{
     display: flex;
     justify-content: space-between;

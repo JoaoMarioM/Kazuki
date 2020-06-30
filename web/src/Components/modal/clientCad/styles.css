@@ -49,30 +49,36 @@
     text-align: center;
 }
 .modalC .name{
-    width: 800px;
+    width: 780px;
 }
 .modalC .address{
-    width: 580px;
+    width: 565px;
+    margin-right: 10px;
 }
 .modalC .number{
     width: 50px;
+    margin-right: 10px;
 }
 .modalC .cep{
-    width: 150px;
+    width: 145px;
 }
 .modalC .neighborhood{
     width: 330px;
+    margin-right: 10px;
 }
 .modalC .city{
     width: 330px;
+    margin-right: 10px;
 }
 .modalC .state{
     width: 100px;
 }
 .modalC .phone{
     width: 200px;
+    margin-right: 10px;
 }.modalC .cellPhone{
     width: 200px;
+    margin-right: 10px;
 }
 .modalC .email{
     width: 360px;

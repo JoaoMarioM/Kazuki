@@ -91,7 +91,7 @@ export default function Modal({ onclose = () => {} }) {
     let modal = (
         <div className="modalClientCad">
           
-           <div className="modalC">
+        <div className="modalC">
         
         <button  className="close" onClick={onclose}>
         <FontAwesomeIcon icon={faTimesCircle} color="#1C1C2D" size="lg" />

@@ -52,6 +52,12 @@ export default function ModalClientSel(props) {
             value={props.data.address}
             // onChange={e => setAddress(e.target.value)}
           />
+          <input className="number" 
+          type="text" 
+          placeholder="Nº"
+          value={props.data.number}
+          // onChange={e => setNumber(e.target.value)}
+        />
           <input className="cep" 
             type="text" 
             placeholder="Cep"

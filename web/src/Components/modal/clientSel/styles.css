@@ -34,10 +34,10 @@
     margin-top: 40px;
     font-size: 25px;
 }
-.modalClientSel .btn button{
+.modalClientSel .btnCad button{
     margin-top: 30px;
-    width: 55px;
-    height: 25px;
+    width: 100px;
+    height: 45px;
     margin-right: 20px;
     cursor: pointer;
 }
@@ -49,41 +49,40 @@
     text-align: center;
 }
 .modalClientSel .name{
-    width: 800px;
+    width: 780px;
 }
 .modalClientSel .address{
-    width: 600px;
+    width: 565px;
+    margin-right: 10px;
+}
+.modalClientSel .number{
+    width: 50px;
+    margin-right: 10px;
 }
 .modalClientSel .cep{
-    width: 180px;
+    width: 145px;
 }
 .modalClientSel .neighborhood{
     width: 330px;
+    margin-right: 10px;
 }
 .modalClientSel .city{
     width: 330px;
+    margin-right: 10px;
 }
 .modalClientSel .state{
     width: 100px;
 }
 .modalClientSel .phone{
     width: 200px;
+    margin-right: 10px;
 }.modalClientSel .cellPhone{
     width: 200px;
+    margin-right: 10px;
 }
 .modalClientSel .email{
     width: 360px;
 }
 .modalClientSel .cpf{
     width: 200px;
-}
-.btnCont{
-    width: 150px;
-    height: 70px;
-}
-.btnCont p{
-    font-size: 18px;
-}
-.btnCont h1{
-    margin-top: 5px;
 }

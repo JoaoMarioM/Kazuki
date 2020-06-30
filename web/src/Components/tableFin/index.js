@@ -73,12 +73,11 @@ function stableSort(array, comparator) {
 
 const headCells = [
   { id: 'id', numeric: false, disablePadding: true, label: 'Id' },
-  { id: 'name', numeric: true, disablePadding: false, label: 'Nome' },
-  { id: 'address', numeric: true, disablePadding: false, label: 'Endereço' },
-  { id: 'number', numeric: true, disablePadding: false, label: 'Numero' },
-  { id: 'cpf', numeric: true, disablePadding: false, label: 'CPF' },
-  { id: 'view', numeric: true, disablePadding: false, label: 'Ver' },
-  { id: 'trash', numeric: true, disablePadding: false, label: '' },
+  { id: 'type', numeric: true, disablePadding: false, label: 'Tipo' },
+  { id: 'date', numeric: true, disablePadding: false, label: 'Data de vencimento' },
+  { id: 'value', numeric: true, disablePadding: false, label: 'Valor' },
+  // { id: 'view', numeric: true, disablePadding: false, label: 'Ver' },
+  // { id: 'trash', numeric: true, disablePadding: false, label: 'Excluir' },
 ];
 
 function EnhancedTableHead(props) {
@@ -96,7 +95,7 @@ function EnhancedTableHead(props) {
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
-            align={headCell.numeric ? 'right' : 'left'}
+            align='center'
             padding={headCell.disablePadding ? 'none' : 'default'}
             sortDirection={orderBy === headCell.id ? order : false}
           >
@@ -166,7 +165,7 @@ const EnhancedTableToolbar = (props) => {
     >
 
       <Typography className={classes.title} variant="h6" id="tableTitle" component="div">
-        Financeiro
+        Contas a pagar
       </Typography>
 
       <Tooltip title="Back">
@@ -300,26 +299,25 @@ const useStyles = makeStyles((theme) => ({
                       <TableCell padding="checkbox">
 
                       </TableCell>
-                      <TableCell component="th" id={labelId} scope="client" padding="none">
+                      <TableCell component="th" id={labelId} scope="client" padding="none" align="center">
                         {client.id}
                       </TableCell>
-                      <TableCell align="right">{client.name}</TableCell>
-                      <TableCell align="right">{client.address}</TableCell>
-                      <TableCell align="right">{client.number}</TableCell>
-                      <TableCell align="right">{client.cpf}</TableCell>
-                      <TableCell align="right">
+                      <TableCell align="center">{client.name}</TableCell>
+                      <TableCell align="center">{client.address}</TableCell>
+                      <TableCell align="center">{client.number}</TableCell>
+                      {/* <TableCell align="center">
                         <button onClick={() => handleModal(true, client)}
                         style={{backgroundColor:'transparent', width:'auto', height:'auto'}}
                         > 
                         <FontAwesomeIcon className="iconEye" icon={faEye} size="lg" color="#1C1C2D" />
                         </button> 
                       </TableCell>
-                      <TableCell align="right">
+                      <TableCell align="center">
                           <button onClick={() => handleOpenAlert(true, client.id)}
                           style={{backgroundColor:'transparent', width:'auto', height:'auto'}}> 
                             <FontAwesomeIcon className="iconEye" icon={faTrash} size="1x" color="#1C1C2D" /> 
                           </button>
-                      </TableCell>
+                      </TableCell> */}
 
                     </TableRow>
                   );

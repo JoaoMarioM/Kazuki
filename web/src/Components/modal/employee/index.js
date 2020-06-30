@@ -16,6 +16,7 @@ export default function ModalEmployee({ onclose = () => {} }) {
 
   const [name, setName] = useState('')
   const [address, setAddress] = useState('')
+  const [number, setNumber] = useState('')
   const [cep, setCep] = useState('')
   const [neighborhood, setNeighborhood] = useState('')
   const [city, setCity] = useState('')
@@ -45,6 +46,7 @@ export default function ModalEmployee({ onclose = () => {} }) {
     const data = {
       name,
       address,
+      number,
       cep,
       neighborhood,
       city,
@@ -149,59 +151,66 @@ export default function ModalEmployee({ onclose = () => {} }) {
           />
 
          <div className="conj1">
-           <input className="endereço" 
+           <input className="address" 
             type="text" 
             placeholder="Endereço:"
-             vlue={address}
-              onChange={e => setAddress(e.target.value)}
+            value={address}
+            onChange={e => setAddress(e.target.value)}
             />
+            <input className="number" 
+            id="inputE"
+            type="text" 
+            placeholder="Nº"
+            value={number}
+            onChange={e => setNumber(e.target.value)}
+          />
            <input className="cep" 
             type="text" 
             placeholder="CEP:"
-             vlue={cep}
-              onChange={e => setCep(e.target.value)}
+            value={cep}
+            onChange={e => setCep(e.target.value)}
             />
          </div>
          
          <div className="conj2">
-          <input className="bairro" 
+          <input className="neighborhood" 
             type="text" 
             placeholder="Bairo:"
-             vlue={neighborhood}
-              onChange={e => setNeighborhood(e.target.value)}
+            value={neighborhood}
+            onChange={e => setNeighborhood(e.target.value)}
             />
-          <input className="cidade" 
+          <input className="city" 
             type="text" 
             placeholder="Cidade:"
-             vlue={city}
-              onChange={e => setCity(e.target.value)}
+            value={city}
+            onChange={e => setCity(e.target.value)}
             />
-          <input className="estado" 
+          <input className="state" 
             type="text" 
             placeholder="Estado:"
-             vlue={state}
-              onChange={e => setState(e.target.value)}
+            value={state}
+            onChange={e => setState(e.target.value)}
             />
          </div>
          
          <div className="conj3">
-           <input className="fone" 
+           <input className="phone" 
             type="text" 
             placeholder="Fone:"
-             vlue={phone}
-              onChange={e => setPhone(e.target.value)}
+            value={phone}
+            onChange={e => setPhone(e.target.value)}
             />
-           <input className="celular" 
+           <input className="cellPhone" 
             type="text" 
             placeholder="Celular:"
-             vlue={cellPhone}
-              onChange={e => setCellPhone(e.target.value)}
+            value={cellPhone}
+            onChange={e => setCellPhone(e.target.value)}
             />
            <input className="email" 
             type="text" 
             placeholder="Email:"
-             vlue={email}
-              onChange={e => setEmail(e.target.value)}
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             />
          </div>
          
@@ -224,13 +233,13 @@ export default function ModalEmployee({ onclose = () => {} }) {
 
 
           <div className="conj5">
-            <input className="empresa" 
+            <input className="company" 
               type="text" 
               placeholder="Empresa:"
               value={company}
               onChange={e => setCompany(e.target.value)}
               />
-            <input className="setor" 
+            <input className="sector" 
               type="text" 
               placeholder="Setor:"
               value={sector}
@@ -239,7 +248,7 @@ export default function ModalEmployee({ onclose = () => {} }) {
           </div>
           
           <div className="conj6">
-            <input className="funcao" 
+            <input className="occupation" 
               type="text" 
               placeholder="Função:"
               value={occupation}

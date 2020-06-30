@@ -21,8 +21,6 @@ export default function ClientNewCont(props) {
 
   const history = useHistory()
 
-  const [address, setAddress] = useState('')
-  const [number, setNumber] = useState('')
   const [serviceMethodS, setServiceMethodS] = useState([])
   const [pestFoundS, setPestsFoundS] = useState([])
   const [characteristics, setCharacteristics] = useState()
@@ -50,8 +48,6 @@ export default function ClientNewCont(props) {
     // serviceMethod.toString()
 
     const data = {
-      address,
-      number,
       serviceMethod,
       pestFound,
       characteristics,
@@ -119,8 +115,6 @@ export default function ClientNewCont(props) {
     history.push('/clienteCont', {idC: id})
   
   }
-
-  const [checkTest, setCheckTest] = useState(false)
 
 
  return (
@@ -257,7 +251,6 @@ export default function ClientNewCont(props) {
             <input className="value" 
             type="text" 
             placeholder="Valor"
-            onKeyUp="maskIt(this,event,'###.###.###,##',true,{pre:'R$'})"
             value={value}
             onChange={e => setValue(e.target.value)}
             />
