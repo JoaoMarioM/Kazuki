@@ -17,7 +17,7 @@ exports.up = function(knex) {
       table.string('sector').notNullable()
       table.string('occupation').notNullable()
       table.string('admissionDate').notNullable()
-      table.string('resignationDate').notNullable()
+      table.string('resignationDate')
       table.string('workload').notNullable()
       table.string('salary').notNullable()
       table.string('user').notNullable()
