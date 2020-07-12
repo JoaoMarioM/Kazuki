@@ -28,7 +28,7 @@ export default function ModalEmployeeSel(props) {
         <h1>Funcionarios</h1>
 
         <form >
-         
+         <label htmlFor="name">Nome</label>
         <input className="name" 
           type="text" 
           placeholder="Nome:"
@@ -37,10 +37,16 @@ export default function ModalEmployeeSel(props) {
           />
 
          <div className="conj1">
-           <input className="endereço" 
+           <input className="address" 
             type="text" 
             placeholder="Endereço:"
              value={props.data.address}
+              // onChange={e => setAddress(e.target.value)}
+            />
+            <input className="number" 
+            type="text" 
+            placeholder="Nº:"
+             value={props.data.number}
               // onChange={e => setAddress(e.target.value)}
             />
            <input className="cep" 
@@ -52,19 +58,19 @@ export default function ModalEmployeeSel(props) {
          </div>
          
          <div className="conj2">
-          <input className="bairro" 
+          <input className="neighborhood" 
             type="text" 
             placeholder="Bairo:"
              value={props.data.neighborhood}
               // onChange={e => setNeighborhood(e.target.value)}
             />
-          <input className="cidade" 
+          <input className="city" 
             type="text" 
             placeholder="Cidade:"
              value={props.data.city}
               // onChange={e => setCity(e.target.value)}
             />
-          <input className="estado" 
+          <input className="state" 
             type="text" 
             placeholder="Estado:"
              value={props.data.state}
@@ -73,13 +79,13 @@ export default function ModalEmployeeSel(props) {
          </div>
          
          <div className="conj3">
-           <input className="fone" 
+           <input className="phone" 
             type="text" 
             placeholder="Fone:"
              value={props.data.phone}
               // onChange={e => setPhone(e.target.value)}
             />
-           <input className="celular" 
+           <input className="cellPhone" 
             type="text" 
             placeholder="Celular:"
              value={props.data.cellPhone}
@@ -112,13 +118,13 @@ export default function ModalEmployeeSel(props) {
 
 
           <div className="conj5">
-            <input className="empresa" 
+            <input className="company" 
               type="text" 
               placeholder="Empresa:"
               value={props.data.company}
               // onChange={e => setCompany(e.target.value)}
               />
-            <input className="setor" 
+            <input className="sector" 
               type="text" 
               placeholder="Setor:"
               value={props.data.sector}
@@ -127,7 +133,7 @@ export default function ModalEmployeeSel(props) {
           </div>
           
           <div className="conj6">
-            <input className="funcao" 
+            <input className="occupation" 
               type="text" 
               placeholder="Função:"
               value={props.data.occupation}
@@ -148,16 +154,16 @@ export default function ModalEmployeeSel(props) {
           </div>
          
           <div className="conj7">
-            <input className="cargaH" 
+            <input className="workload" 
               type="text" 
               placeholder="Carga horaria:"
               value={props.data.workload}
               // onChange={e => setWorkload(e.target.value)}
               />
-            <input className="salario" 
+            <input className="salary" 
               type="text" 
               placeholder="Salario:"
-              value={props.data.salary}
+              value={Intl.NumberFormat('pt-BR', {style:'currency', currency: 'BRL'}).format(props.data.salary)}
               // onChange={e => setSalary(e.target.value)}
               />
           </div>

@@ -36,7 +36,7 @@ import AlertDialogDelete from '../dialog/dialogDelete'
 
 import SnackSuccess from '../../Components/snackBar/success'
 
-export default function TableC() {
+export default function TableC(props) {
 
   const [isOpenS, setIsOpenS] = useState(false)
   const [isOpenAD, setIsOpenAD] = useState(false)
@@ -216,16 +216,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
+const search = props.search
 
   const [clients, setClients] = useState([])
   // const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    api.get('clientes').then(response => {
+
+    const params = {}
+
+    if(search){
+      params.name = search
+    }
+
+    api.get('clientes', {params})
+    .then(response => {
       setClients(response.data)
     })
-  }, [])
+  }, [search])
 
 
   const classes = useStyles();

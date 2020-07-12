@@ -11,7 +11,7 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons'
 
 import api from '../../../services/api'
 
-export default function ModalEmployee({ onclose = () => {} }) {
+export default function ModalEmployee(props) {
 
   const [name, setName] = useState('')
   const [address, setAddress] = useState('')
@@ -87,7 +87,7 @@ export default function ModalEmployee({ onclose = () => {} }) {
     }else if(sector === '' || occupation === ""){
       setIsOpenA(true)
       return false
-    }else if(admissionDate === '' || resignationDate === ""){
+    }else if(admissionDate === ''){
       setIsOpenA(true)
       return false
     }else if(workload === '' || salary === ""){
@@ -134,7 +134,7 @@ export default function ModalEmployee({ onclose = () => {} }) {
           
         <div className="modalF">
         
-        <button  className="close" onClick={onclose}>
+        <button  className="close" onClick={props.onclose}>
         <FontAwesomeIcon icon={faTimesCircle} color="#1C1C2D" size="lg" />
         </button>
 
@@ -200,7 +200,7 @@ export default function ModalEmployee({ onclose = () => {} }) {
             onChange={e => setPhone(e.target.value)}
             />
            <input className="cellPhone" 
-            type="text" 
+            type="tel" 
             placeholder="Celular:"
             value={cellPhone}
             onChange={e => setCellPhone(e.target.value)}
@@ -254,13 +254,13 @@ export default function ModalEmployee({ onclose = () => {} }) {
               onChange={e => setOccupation(e.target.value)}
               />
             <input className="dtAdmi" 
-              type="text" 
+              type="date" 
               placeholder="Data de admissão:"
               value={admissionDate}
               onChange={e => setAdmissionDate(e.target.value)}
               />
             <input className="dtDem" 
-              type="text" 
+              type="date" 
               placeholder="Data de demissão:"
               value={resignationDate}
               onChange={e => setResignationDate(e.target.value)}
@@ -268,13 +268,13 @@ export default function ModalEmployee({ onclose = () => {} }) {
           </div>
          
           <div className="conj7">
-            <input className="cargaH" 
+            <input className="workload" 
               type="text" 
               placeholder="Carga horaria:"
               value={workload}
               onChange={e => setWorkload(e.target.value)}
               />
-            <input className="salario" 
+            <input className="salary" 
               type="text" 
               placeholder="Salario:"
               value={salary}

@@ -12,3 +12,6 @@ button{
     border: 0;
     cursor: pointer;
 }
+input:focus{
+    border-color: #2741ff;
+}

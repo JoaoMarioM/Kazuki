@@ -132,9 +132,9 @@ function handleBack(id){
             />
           </div>
 
-          <div className="btnCad">
+          {/* <div className="btnCad">
             <button type="submit" className="btnSave">Salvar</button>
-          </div>
+          </div> */}
 
       </form>
 

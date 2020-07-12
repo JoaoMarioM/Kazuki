@@ -36,12 +36,18 @@
     margin-top: 40px;
     font-size: 25px;
 }
-.modalF  .btn button{
+.modalF .line{
+    margin: 20px auto 0 ;
+    height: 1px;
+    width: 100%;
+    background-color: #3333;
+}
+.modalF  .btnCad button{
     margin-top: 30px;
-    width: 55px;
-    height: 25px;
+    width: 200px;
+    height: 35px;
     margin-right: 20px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .modalF  input{
     height: 25px;
@@ -83,4 +89,33 @@
 }
 .modalF  .cpf{
     width: 200px;
+}
+.modalF .company{
+    margin-right: 10px;
+    width: 400px;
+}
+.modalF .sector{
+    width: 300px;
+}
+
+.modalF .occupation{
+    margin-right: 10px;
+    width: 400px;
+}
+.modalF .dtAdmi{
+    margin-right: 10px;
+}
+.modalF .workload{
+    margin-right: 10px;
+    width: 300px;
+}
+.modalF .salary{
+    width: 170px;
+}
+.modalF .user{
+    margin-right: 10px;
+    width: 300px;
+}
+.modalF .password{
+    width: 250px;
 }
