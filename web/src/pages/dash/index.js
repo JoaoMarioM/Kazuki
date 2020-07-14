@@ -13,8 +13,6 @@ export default function dash(){
            <Menu />
             <div className="dash">
                 
-                <input className="inputP" type="text" placeholder="Digite o nome do cliente"/>
-                
                 <div className="dashItens">
                    <div className="item1">
                     

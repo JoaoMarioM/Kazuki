@@ -24,6 +24,9 @@ export default function Login(){
             const response = await api.post('sessions', {user, password})
 
             localStorage.setItem('nameFunc', response.data.name)
+            localStorage.setItem('accessFunc', response.data.accessType)
+
+            console.log(response.data.accessType)
 
             history.push('/dash')
         } catch (err) {

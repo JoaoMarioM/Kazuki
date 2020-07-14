@@ -13,6 +13,7 @@ routes.post('/sessions', sessionController.create)
 routes.get('/clientes', clientController.index)
 routes.post('/clientes', clientController.create)
 routes.delete('/clientes/:id', clientController.delete)
+routes.put('/clientes/:id', clientController.update)
 
 routes.get('/funcionario', employeeController.index)
 routes.post('/funcionario', employeeController.create)

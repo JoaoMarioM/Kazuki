@@ -28,6 +28,7 @@ module.exports = {
             resignationDate,
             workload,
             salary,
+            accessType,
             user,
             password
         } = request.body
@@ -51,6 +52,7 @@ module.exports = {
             resignationDate,
             workload,
             salary,
+            accessType,
             user,
             password
         })

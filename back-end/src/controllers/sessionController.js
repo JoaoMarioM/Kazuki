@@ -8,6 +8,7 @@ module.exports = {
             .where('user', user)
             .andWhere('password', password)
             .select('name')
+            .select('accessType')
             .first()
 
         if (!user || !password) {

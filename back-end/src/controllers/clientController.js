@@ -56,7 +56,7 @@ module.exports = {
         return response.json({ id })
     },
 
-    async update(request, response, next){
+    async update(request, response){
         const {id} = request.params
         
         const{
@@ -71,7 +71,7 @@ module.exports = {
             cellPhone,
             email,
             cpf
-        }
+        } = request.body
 
         await connection('clientes').update({
             name,
@@ -87,6 +87,7 @@ module.exports = {
             cpf
         })
         .where('id', id)
+        return response.status(204).send()
     },
 
     async delete(request, response){

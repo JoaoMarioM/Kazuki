@@ -30,6 +30,19 @@
     background-color: transparent;
     float: right;
 }
+.cli{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.edit{
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    background-color: transparent;
+    right: 10px;
+    /* position: absolute; */
+}
 .modalClientSel h1{
     margin-top: 40px;
     font-size: 25px;
@@ -85,4 +98,10 @@
 }
 .modalClientSel .cpf{
     width: 200px;
+}
+.btnSaveE{
+    display: none;  
+}
+.btnCont{
+    display: none;  
 }

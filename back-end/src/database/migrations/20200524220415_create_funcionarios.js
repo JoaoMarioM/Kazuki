@@ -20,6 +20,7 @@ exports.up = function(knex) {
       table.string('resignationDate')
       table.string('workload').notNullable()
       table.string('salary').notNullable()
+      table.string('accessType').notNullable()
       table.string('user').notNullable()
       table.string('password').notNullable()
   })

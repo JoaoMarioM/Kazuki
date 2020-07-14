@@ -32,6 +32,7 @@ export default function ModalEmployee(props) {
   const [resignationDate, setResignationDate] = useState('')
   const [workload, setWorkload] = useState('')
   const [salary, setSalary] = useState('')
+  const [accessType, setAccessType] = useState('')
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
 
@@ -62,6 +63,7 @@ export default function ModalEmployee(props) {
       resignationDate,
       workload,
       salary,
+      accessType,
       user,
       password
     }
@@ -87,10 +89,10 @@ export default function ModalEmployee(props) {
     }else if(sector === '' || occupation === ""){
       setIsOpenA(true)
       return false
-    }else if(admissionDate === ''){
+    }else if(admissionDate === '' || workload === ''){
       setIsOpenA(true)
       return false
-    }else if(workload === '' || salary === ""){
+    }else if(salary === "" || accessType){
       setIsOpenA(true)
       return false
     }else if(user === '' || password === ""){
@@ -104,6 +106,7 @@ export default function ModalEmployee(props) {
   
           setName('')
           setAddress('')
+          setNumber('')
           setCep('')
           setNeighborhood('')
           setCity('')
@@ -120,6 +123,7 @@ export default function ModalEmployee(props) {
           setResignationDate('')
           setWorkload('')
           setSalary('')
+          setAccessType('')
           setUser('')
           setPassword('')
        
@@ -279,6 +283,12 @@ export default function ModalEmployee(props) {
               placeholder="Salario:"
               value={salary}
               onChange={e => setSalary(e.target.value)}
+              />
+              <input className="access" 
+              type="text" 
+              placeholder="Tipo de acesso:"
+              value={accessType}
+              onChange={e => setAccessType(e.target.value)}
               />
           </div>
           
