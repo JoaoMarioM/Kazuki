@@ -92,7 +92,7 @@ export default function ModalEmployee(props) {
     }else if(admissionDate === '' || workload === ''){
       setIsOpenA(true)
       return false
-    }else if(salary === "" || accessType){
+    }else if(salary === "" || accessType === ''){
       setIsOpenA(true)
       return false
     }else if(user === '' || password === ""){

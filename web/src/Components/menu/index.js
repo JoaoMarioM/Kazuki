@@ -4,38 +4,80 @@ import { Link, useHistory } from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faUserCircle, faUser, faUsers, faDollarSign, faCalendarAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
-import './styles.css'
+import {MenuContainer, Nav, BtnLogout, IconUser, NameFunc, LinkItem} from './styles'
 import '../../Assets/Css/global.css'
 
 import AlertDialog from '../dialog/dialogLogout'
 
+import SnackError from '../snackBar/erro'
+
 export default function Menu(){
 
     const nameFunc = localStorage.getItem('nameFunc')
+    const accessFunc = localStorage.getItem('accessFunc')
+
+    console.log(accessFunc)
+
 
     const [isOpen, setIsOpen] = useState(false)
 
+    const [isOpenE, setIsOpenE] = useState(false)
+
+    const history = useHistory()
+
+    function handleLock(){
+        if(accessFunc === 'Admin'){
+            history.push('/financeiro')
+        }else(
+            setIsOpenE(true)
+        )
+       
+    }
+
+
     return(
-        <div className="menu">
-        <nav>
-            <button className="logout" onClick={() => setIsOpen(true)}>
-                <FontAwesomeIcon className="iconLogout" icon={faSignOutAlt} size="lg" color="#fff"/>
-            </button>
+        <MenuContainer>
+        <Nav>
+            <BtnLogout className="logout" onClick={() => setIsOpen(true)}>
+                <FontAwesomeIcon icon={faSignOutAlt} size="lg" color="#fff"/>
+            </BtnLogout>
 
-            <FontAwesomeIcon className="iconUser" icon={faUserCircle} size="5x" color="#2741ff"/>
+            <IconUser>
+                <FontAwesomeIcon icon={faUserCircle} size="5x" color="#2741ff" />
+            </IconUser>
             
-            <h1>{nameFunc}</h1>
+            <NameFunc>{nameFunc}</NameFunc>
 
-            <Link to="/clientes" className="txtMenu"><p><FontAwesomeIcon className="iconMenu" icon={faUser} color="#2741FF" />Clientes</p></Link>
-            <Link to="/funcionarioList" className="txtMenu"><p><FontAwesomeIcon className="iconMenu" icon={faUsers} color="#2741FF" />Funcionarios</p></Link>
-            <Link to="/financeiro" className="txtMenu"><p><FontAwesomeIcon className="iconMenu" icon={faDollarSign} color="#2741FF" />Financeiro </p></Link>
-            <Link to="/agenda" className="txtMenu"><p><FontAwesomeIcon className="iconMenu" icon={faCalendarAlt} color="#2741FF" />Agenda </p></Link>
-        </nav>
+            <LinkItem>
+            
+            <Link to="/clientes" className="txtMenu" >
+                <p><FontAwesomeIcon className="iconMenu" icon={faUser} color="#2741FF" />Clientes</p>
+            </Link>
+            <Link to="/funcionarioList" className="txtMenu">
+                <p><FontAwesomeIcon className="iconMenu" icon={faUsers} color="#2741FF" />Funcionarios</p>
+            </Link>
+            <button onClick={handleLock} className="txtMenu">
+                <p><FontAwesomeIcon className="iconMenu" icon={faDollarSign} color="#2741FF" />Financeiro </p>
+            </button>
+            <Link to="/agenda" className="txtMenu">
+                <p><FontAwesomeIcon className="iconMenu" icon={faCalendarAlt} color="#2741FF" />Agenda </p>
+            </Link>
+            
+            </LinkItem>
+            
+
+
+        </Nav>
 
         {
             isOpen ? <AlertDialog 
             onclose={() => setIsOpen(false)} /> : null
         }
-    </div> 
+
+        {
+            isOpenE ? <SnackError
+            onclose={() => setIsOpenE(false)} title="Acesso negado!"/> : null
+        }
+    </MenuContainer> 
     )
 }

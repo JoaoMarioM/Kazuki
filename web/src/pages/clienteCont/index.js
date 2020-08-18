@@ -2,7 +2,7 @@ import React from 'react';
 
 import TableCont from '../../Components/tableCont'
 
-import './styles.css'
+import {Dash, Main} from '../../Components/dash'
 import '../../Assets/Css/global.css'
 import Menu from '../../Components/menu'
 
@@ -17,17 +17,13 @@ const idC =  props.history.location.state.idC
 
  
 
-  <div className="main">
-  <Menu />
-  <div className="dash">
-      <div className="client">
-          <TableCont idClient={idC}/>
-      </div>
+  <Main>
+    <Menu />
+    <Dash>
+      <TableCont idClient={idC} />   
+    </Dash>
     
-      
-  </div>
-  
 
-</div>
+</Main>
   );
 }

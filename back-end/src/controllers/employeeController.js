@@ -1,4 +1,5 @@
-const connection = require('../database/connection')
+const connection = require('../database/connection');
+const bcript = require('bcrypt')
 
 module.exports = {
     async index(request, response) {
@@ -32,6 +33,8 @@ module.exports = {
             user,
             password
         } = request.body
+
+        const passwordCript = await bcript.hash(password, 10)
         const [id] = await connection('funcionario').insert({
             name,
             address,
@@ -54,7 +57,7 @@ module.exports = {
             salary,
             accessType,
             user,
-            password
+            password:passwordCript
         })
 
         return response.json({ id })

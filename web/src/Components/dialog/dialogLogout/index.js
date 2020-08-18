@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useHistory } from 'react-router-dom'
 
-import './styles.css'
+import {DialogC, DialogP, Title, SubTitle, ButtonY, ButtonN, ButtonContainer} from './styles'
 import '../../../Assets/Css/global.css'
 
 
@@ -16,22 +16,23 @@ export default function AlertDialog({ onclose = () => {} }) {
     }
 
     let dialog = (
-        <div className="dialogC">
-            <h1>Deseja realmente sair ?</h1>
+        <DialogC>
+            <Title>Deseja realmente sair ?</Title>
 
-            <p>Certifique-se de que todas as alterações foram salvas!</p>
-            <div className="btn">
-                <button onClick={logout}>Sim</button> 
-                <button onClick={onclose}>Não</button>
-            </div>
+            <SubTitle>Certifique-se de que todas as alterações foram salvas!</SubTitle>
+              <ButtonContainer>
+                <ButtonY onClick={logout}>Sim</ButtonY> 
+                <ButtonN onClick={onclose}>Não</ButtonN>
+              </ButtonContainer>
+                
             
-        </div>
+        </DialogC>
     )
 
   return (
-    <div className="dialogP">
+    <DialogP>
       {dialog}
-    </div>
+    </DialogP>
   );
 }
 

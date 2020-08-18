@@ -1,37 +1,36 @@
 import React from 'react'
 
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-// import { faUserCircle, faUser, faUsers, faDollarSign, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import {Main, Dash} from '../../Components/dash'
+import {DashItens, Item1, Item2, Item3, Item4, DashI} from './styles'
 
-import './styles.css'
 import '../../Assets/Css/global.css'
 import Menu from '../../Components/menu'
 
 export default function dash(){
     return(
-        <div className="main">
+        <Main>
            <Menu />
-            <div className="dash">
+            <Dash>
                 
-                <div className="dashItens">
-                   <div className="item1">
+                <DashItens>
+                   <Item1>
                     
-                    </div>
-                    <div className="dashI">
-                        <div className="item2">
+                    </Item1>
+                    <DashI>
+                        <Item2>
                         
-                        </div>
-                        <div className="item3">
+                        </Item2>
+                        <Item3>
                             
-                        </div>
-                        <div className="item4">
+                        </Item3>
+                        <Item4>
                         
-                        </div> 
-                    </div>
+                        </Item4> 
+                    </DashI>
                     
-                </div>
+                </DashItens>
                 
-            </div>
-        </div>
+            </Dash>
+        </Main>
     )
 }

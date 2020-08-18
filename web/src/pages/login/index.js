@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import { useHistory } from 'react-router-dom'
 
-import './styles.css'
 import '../../Assets/Css/global.css'
 
+import {Container, BoxCenter, Form, Button} from './styles'
+import {Input} from '../../Components/input'
 import api from '../../services/api'
 import SnackError from '../../Components/snackBar/erro'
 
@@ -35,30 +36,36 @@ export default function Login(){
     }
 
     return(
-        <div className="container">
-           <div className="log">
-               <form onSubmit={login}>
-                <input className="inputLogin" 
+        <Container>
+           <BoxCenter>
+               <Form onSubmit={login}>
+                <Input 
+                width="80%"
+                height="30px"
+                margin="10px auto"
                 type="text" 
                 placeholder="Usuario"
                 value={user}
                 onChange={e => setUser(e.target.value)}
                 />
-                <input className="inputLogin" 
+                <Input 
+                width="80%"
+                height="30px"
+                margin="10px auto"
                 type="password" 
                 placeholder="Senha"
                 value={password}
                 onChange={ e => setPassword(e.target.value)}
                 />
-                <button>Entar</button>
-               </form>
-           </div>
+                <Button>Entar</Button>
+               </Form>
+           </BoxCenter>
 
            {
             isOpenE ? <SnackError
             onclose={() => setIsOpenE(false)} title="Não foi possivel fazer o login!"/> : null
            }
        
-        </div>
+        </Container>
     )
 }

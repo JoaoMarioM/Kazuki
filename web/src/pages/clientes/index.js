@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 
-import './styles.css'
+import {Main, Dash} from '../../Components/dash'
+import {Input} from '../../Components/input'
+import {Table} from './styles'
 import '../../Assets/Css/global.css'
 import Menu from '../../Components/menu'
 
@@ -12,22 +14,25 @@ export default function Clientes() {
     const [search, setSearch] = useState('')
 
  return (
-    <div className="main">
+    <Main>
         <Menu />
-        <div className="dash">
-            <input className="inputP" 
+        <Dash>
+            <Input 
+            height="30px"
+            width="100%"
+            margin="10px auto"
             type="text" 
             placeholder="Digite o nome do cliente"
             value={search}
             onChange={e => setSearch(e.target.value)}
             />
 
-            <div className="table">
+            <Table>
                 <TableC  search={search}/>
-            </div>
-        </div>
+            </Table>
+        </Dash>
         
 
-    </div>
+    </Main>
   );
 }
