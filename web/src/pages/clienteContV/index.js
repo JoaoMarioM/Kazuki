@@ -32,18 +32,15 @@ const pestFound = JSON.parse(idCo.pestFound)
 
 const history = useHistory()
 
-const [test, setTest] = useState(serviceMethod)
-
 function handleBack(id){
   history.push('/clienteCont', {idC: id})
 
 }
 
 const [update, setUpdate] = useState(false)
-
+const [test, setTest] = useState(serviceMethod)
 const [pestFoundS, setPestsFoundS] = useState([])
 const [serviceMethodS, setServiceMethodS] = useState([])
-
 const [counterP, setCounterP] = useState(0)
 
 function AddP(e){
@@ -79,8 +76,8 @@ function RemoveP(e){
 
   // }else if(test.length > 0){
     
-    test.pop()
-    
+    setTest(test.pop())
+
     console.log(test)
   // }
 
