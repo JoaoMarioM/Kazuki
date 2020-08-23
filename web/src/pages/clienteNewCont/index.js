@@ -127,6 +127,7 @@ export default function ClientNewCont(props) {
 
   }
 
+  console.log(serviceMethodS)
 
   return (
     <Main>
@@ -148,7 +149,6 @@ export default function ClientNewCont(props) {
 
               {new Array(counterM).fill('').map((_, index) => (
                 <SelectNew
-                  // value={serviceMethod}
                   onChange={contArrayService(index)}
                   key={index}
                 >
@@ -183,7 +183,6 @@ export default function ClientNewCont(props) {
 
               {new Array(counterP).fill('').map((_, index) => (
                 <SelectNew
-                  // value={pestFound} 
                   onChange={contArrayFound(index)}
                   key={index}>
                   <option value=''>--</option>

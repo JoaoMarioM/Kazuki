@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Dash, Main } from '../../Components/dash'
 import './styles.css'
 import '../../Assets/Css/global.css'
 import Menu from '../../Components/menu'
@@ -10,14 +11,14 @@ export default function FinanceiroSale() {
 
 
  return (
-   <div className="main">
+   <Main>
        <Menu />
 
-       <div className="dash">
+       <Dash>
         <div className="financialSale"> 
           <TableFinancial />
         </div>
-       </div>
-   </div>
+       </Dash>
+   </Main>
   );
 }

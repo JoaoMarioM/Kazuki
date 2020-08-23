@@ -1,4 +1,5 @@
 const connection = require('../database/connection')
+const { update } = require('./clientController')
 
 module.exports = {
     async index(request, response){
@@ -40,6 +41,43 @@ module.exports = {
         })
 
         return response.json({ id })
+    },
+    async update(request, response){
+        const {id} = request.params
+
+        const {
+            serviceMethod,
+            pestFound,
+            characteristics,
+            startDate,
+            warrant,
+            hour,
+            budgetTechnician,
+            responsibleTechnician,
+            assistantTechnician,
+            payment,
+            value
+        } = request.body
+
+        // const cliente_id = request.headers.authorization
+
+        await connection('contratos').update({
+            serviceMethod,
+            pestFound,
+            characteristics,
+            startDate,
+            warrant,
+            hour,
+            budgetTechnician,
+            responsibleTechnician,
+            assistantTechnician,
+            payment,
+            value,
+            // cliente_id
+        })
+
+        .where('id', id)
+        return response.status(204).send()
     },
 
     async delete(request, response){

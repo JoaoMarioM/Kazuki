@@ -30,10 +30,6 @@ import AlertDialogDelete from '../dialog/dialogDelete'
 
 export default function TableFunc() {
 
-function createData(id, name, address, number, cpf) {
-  return { id, name, address, number, cpf };
-}
-
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
@@ -122,7 +118,8 @@ EnhancedTableHead.propTypes = {
 const useToolbarStyles = makeStyles((theme) => ({
   root: {
     paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(1),
+    paddingRight: theme.spacing(2),
+    marginTop: 20,
   },
   highlight:
     theme.palette.type === 'light'

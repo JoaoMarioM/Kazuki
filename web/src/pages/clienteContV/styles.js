@@ -98,7 +98,7 @@ export const Characteristics = styled.textarea`
 
 
 
-// .clientCont{
+/* // .clientCont{
 //     margin-top: 20px;
 //     background-color: #fff;
 //     border-radius: 10px;
@@ -228,4 +228,4 @@ export const Characteristics = styled.textarea`
 //     height: auto;
 //     width: auto;
 //     background-color: transparent;
-// }
+// } */

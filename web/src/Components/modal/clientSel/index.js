@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import { ModalClientView, ModalClientSe, Form, ButtonContract } from './styles.js'
+import { Form, ModalV, ModalView } from '../styleGlobal/modalView'
+import { ButtonContract } from './styles.js'
 import { ModalP, Conj, Title, ButtonSave } from '../styleGlobal/modalP'
 import { Input } from '../../input'
 
@@ -67,9 +68,9 @@ export default function ModalClientSel(props) {
   }
 
   let modal = (
-    <ModalClientView>
+    <ModalView height='450px'>
 
-      <ModalClientSe>
+      <ModalV>
 
         <ModalHeader
           onclose={props.onclose}
@@ -232,9 +233,9 @@ export default function ModalClientSel(props) {
       onclose={() => setIsOpenA(false)} title="Certifique-se de preencher todos os campos!"/> : null
       } */}
 
-      </ModalClientSe>
+      </ModalV>
 
-    </ModalClientView>
+    </ModalView>
 
   )
 

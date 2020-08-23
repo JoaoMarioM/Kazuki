@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 import { ModalP, Conj, Title, ButtonSave } from '../styleGlobal/modalP'
 import { Input } from '../../input'
-import { ModalClientView, ModalClient, Close, Form } from './styles'
+import {Close, Form, ModalV, ModalView } from '../styleGlobal/modalView'
+// import { ModalClientView, ModalClient, Close, Form } from './styles'
 import '../../../Assets/Css/global.css'
 
 import SnackSuccess from '../../snackBar/success'
@@ -91,9 +92,9 @@ export default function Modal({ onclose = () => { } }) {
   }
 
   let modal = (
-    <ModalClientView>
+    <ModalView height='450px'>
 
-      <ModalClient>
+      <ModalV>
 
         <Close onClick={onclose}>
           <FontAwesomeIcon icon={faTimesCircle} color="#1C1C2D" size="lg" />
@@ -229,9 +230,9 @@ export default function Modal({ onclose = () => { } }) {
             onclose={() => setIsOpenA(false)} title="Certifique-se de preencher todos os campos!" /> : null
         }
 
-      </ModalClient>
+      </ModalV>
 
-    </ModalClientView>
+    </ModalView>
 
   )
 

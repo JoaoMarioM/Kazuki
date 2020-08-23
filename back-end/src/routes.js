@@ -21,6 +21,7 @@ routes.delete('/funcionario/:id', employeeController.delete)
 
 routes.get('/contratos', contractController.index)
 routes.post('/contratos', contractController.create)
+routes.put('/contratos/:id', contractController.update)
 routes.delete('/contratos/:id', contractController.delete)
 
 routes.get('/profileContract', profileContractController.index)
